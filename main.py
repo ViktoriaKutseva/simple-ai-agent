@@ -8,15 +8,15 @@ client = OpenAI(
 
 completion = client.chat.completions.create(
   extra_headers={
-    # "HTTP-Referer": "<YOUR_SITE_URL>", # Optional. Site URL for rankings on openrouter.ai.
-    # "X-Title": "<YOUR_SITE_NAME>", # Optional. Site title for rankings on openrouter.ai.
+    "HTTP-Referer": "<YOUR_SITE_URL>", # Optional. Site URL for rankings on openrouter.ai.
+    "X-Title": "<YOUR_SITE_NAME>", # Optional. Site title for rankings on openrouter.ai.
   },
   extra_body={},
-  model="deepseek/deepseek-chat-v3.1:free",
+  model="z-ai/glm-4.5-air:free",
   messages=[
     {
       "role": "user",
-      "content": "What is the date and time right now?"
+      "content": "What is the meaning of life?"
     }
   ]
 )
